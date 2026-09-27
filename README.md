@@ -42,6 +42,8 @@ Level, zone, and party are not yet read directly from the game. They appear only
 
 **Does the app need to stay open?** It can remain in the notification area. After its first launch, a lightweight watcher starts with Windows and opens the presence app only when the game starts.
 
+**Why can't I see the GitHub button on my own Discord presence?** [Discord shows Rich Presence buttons only to other users](https://docs.discord.com/developers/discord-social-sdk/development-guides/setting-rich-presence#setting-buttons). Ask a friend or use a second account to view your profile and check the button.
+
 **How do updates work?** Use Settings → Updates to check and install. When automatic updates are enabled, the app checks at most every six hours and installs a newer release if available. The app briefly closes while the installer replaces it, then restarts. Version 0.6.1 must be upgraded to 0.7.0 with the installer once; in-app updates work from 0.7.0 onward.
 
 **How do I uninstall it?** Use **Windows Settings → Installed apps → AION 2 Discord Presence**.
@@ -91,6 +93,8 @@ Le niveau, la zone et le groupe ne sont pas encore lus directement dans le jeu. 
 **Faut-il créer une application Discord ?** Non. Un Application ID partagé est intégré. Vous pouvez saisir le vôtre dans les paramètres.
 
 **L'application doit-elle rester ouverte ?** Elle peut rester dans la zone de notification. Après sa première ouverture, un surveillant léger démarre avec Windows et ouvre l'application seulement lorsque le jeu se lance.
+
+**Pourquoi le bouton GitHub n'apparaît-il pas sur ma propre présence Discord ?** [Discord affiche les boutons Rich Presence uniquement aux autres utilisateurs](https://docs.discord.com/developers/discord-social-sdk/development-guides/setting-rich-presence#setting-buttons). Demandez à un ami ou utilisez un second compte pour vérifier le bouton sur votre profil.
 
 **Comment se font les mises à jour ?** Utilisez **Paramètres → Mises à jour** pour rechercher et installer. Si l'option automatique est activée, l'application vérifie au plus toutes les six heures et installe une nouvelle version disponible. Elle se ferme brièvement pendant l'installation, puis redémarre. La version 0.6.1 doit être remplacée une fois avec l'installateur 0.7.0 ; les mises à jour intégrées fonctionnent à partir de 0.7.0.
 

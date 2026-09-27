@@ -1,0 +1,7 @@
+Copyright (c) 2026 KaiiZzeR971. All rights reserved.
+
+Permission is granted to download and install the unmodified AION 2 Discord Presence installer for personal use.
+
+No permission is granted to redistribute, modify, reverse engineer, or republish this software or its assets, except where applicable law permits otherwise. The source code is not included in this repository.
+
+AION 2 and Discord names and marks belong to their respective owners. This is an unofficial fan application and is not affiliated with or endorsed by NCSOFT or Discord.

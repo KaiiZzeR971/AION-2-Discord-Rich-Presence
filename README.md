@@ -9,7 +9,7 @@ Show your **AION 2** session on Discord with a dedicated Windows app. It starts 
 1. Download [AionPresence-Setup-0.7.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.exe).
 2. Run the installer on Windows 10 or 11. Open **AION 2 Discord Presence** from the Start menu once to set up automatic launch.
 3. Keep the Discord desktop app open. A shared Discord Application ID and presence artwork are configured by default. Choose your language and visibility settings in the app.
-4. To detect a Global character automatically, install [Npcap from its official site](https://npcap.com/#download) separately. Reopen the presence app after installing it.
+4. To detect a Global character automatically, install [Npcap from its official site](https://npcap.com/#download) separately. In its installer, enable **WinPcap API-compatible Mode** and leave **Restrict Npcap driver's access to Administrators only** off. Reopen the presence app afterward.
 
 Installation is required; no PowerShell window opens. The installer is currently **unsigned**, so Windows may display a warning. You can verify the download with its [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.sha256).
 
@@ -63,7 +63,7 @@ Affichez votre session **AION 2** sur Discord avec une application Windows dédi
 1. Téléchargez [AionPresence-Setup-0.7.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.exe).
 2. Lancez l'installateur sur Windows 10 ou 11, puis ouvrez une fois **AION 2 Discord Presence** depuis le menu Démarrer pour activer le lancement automatique.
 3. Gardez l'application Discord de bureau ouverte. L'Application ID partagé et les images de la présence sont déjà configurés. Choisissez la langue et les informations affichées dans les paramètres.
-4. Pour détecter automatiquement le personnage sur Global, installez [Npcap depuis son site officiel](https://npcap.com/#download) séparément, puis rouvrez l'application.
+4. Pour détecter automatiquement le personnage sur Global, installez [Npcap depuis son site officiel](https://npcap.com/#download) séparément. Pendant l'installation, activez **WinPcap API-compatible Mode** et laissez **Restrict Npcap driver's access to Administrators only** désactivé. Rouvrez ensuite l'application.
 
 L'installation est requise et aucune fenêtre PowerShell ne s'ouvre. L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Vérifiez le fichier téléchargé avec sa [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.sha256).
 

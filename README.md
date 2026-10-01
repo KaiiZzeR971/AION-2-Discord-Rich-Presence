@@ -6,12 +6,12 @@ Show your **AION 2** session on Discord with a dedicated Windows app. It starts 
 
 ## Download and install
 
-1. Download [AionPresence-Setup-0.7.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.exe).
+1. Download [AionPresence-Setup-0.7.2.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.2/AionPresence-Setup-0.7.2.exe).
 2. Run the installer on Windows 10 or 11. Open **AION 2 Discord Presence** from the Start menu once to set up automatic launch.
 3. Keep the Discord desktop app open. A shared Discord Application ID and presence artwork are configured by default. Choose your language and visibility settings in the app.
 4. To detect a Global character automatically, install [Npcap from its official site](https://npcap.com/#download) separately. In its installer, enable **WinPcap API-compatible Mode** and leave **Restrict Npcap driver's access to Administrators only** off. Reopen the presence app afterward.
 
-Installation is required; no PowerShell window opens. The installer is currently **unsigned**, so Windows may display a warning. You can verify the download with its [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.sha256).
+Installation is required; no PowerShell window opens. The installer is currently **unsigned**, so Windows may display a warning. You can verify the download with its [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.2/AionPresence-Setup-0.7.2.sha256).
 
 ## Screenshots
 
@@ -27,16 +27,16 @@ Installation is required; no PowerShell window opens. The installer is currently
 
 - Automatic launch to the notification area with `Aion2.exe`, and automatic exit when the game closes.
 - Character name from the game window title when available, with a manual fallback.
-- Global Steam client detection using its `Saved_Steam` folder. With Npcap installed, the app reads the current character name and class from the game's local network traffic. It has been verified on the EU Israphel server. The saved name and class fields remain available as fallbacks.
+- Global Steam client detection using its `Saved_Steam` folder. With Npcap installed, the app reads the active character, class, level, gear score, region, and location from the game's local network traffic. It retrieves the server name from [NCSOFT's public character search](https://aion2.plaync.com/), with saved fields available as fallbacks.
 - Timer based on the game process start time, preserved when the presence app restarts.
 - French or English interface and presence, with individual visibility controls.
-- Global EU, NA, SA and JP server regions, plus TW and KR client detection.
+- Automatic Global server regions for EU, NA East, NA West, South America, and Asia, plus TW and KR client detection.
 - Game image and class icons, including Brawler, in the Discord presence.
 - A Discord button linking to this project's latest GitHub download page. Enabled by default; switch it off in Settings → Visibility.
 - Check and install updates in the app. Automatic installation is available in Settings → Updates and is off by default. Downloaded installers are checked against GitHub's SHA-256 digest.
 - Local preview, saved preferences, and configurable close button behavior.
 
-The EU Israphel server name is recognized from its verified game server ID. Other Global server names can be entered once as a fallback until their IDs are confirmed. A fresh login or zone transition may be needed before the game sends character identity while the app is running. The detected identity is kept for the current game session, including when the presence app restarts. Level, equipment level, zone, and party are not yet confirmed on Global; they stay hidden unless a compatible profile data source supplies them. Npcap is not bundled with this installer.
+Global server names are looked up by the character's exact name, server ID, and region. The public search refreshes no more than once every five minutes. A fresh login or zone transition may be needed before the game sends character identity while the app is running. The identity is kept for the current game session, including when the presence app restarts. The game session provides character level and gear score (`GS`). Precise location is verified for Safe Haven and Nornir Assembly; other recognized field maps show their broader region, such as Altgard. Party size remains hidden without a compatible profile source. Npcap is not bundled with this installer.
 
 ## FAQ
 
@@ -60,12 +60,12 @@ Affichez votre session **AION 2** sur Discord avec une application Windows dédi
 
 ### Télécharger et installer
 
-1. Téléchargez [AionPresence-Setup-0.7.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.exe).
+1. Téléchargez [AionPresence-Setup-0.7.2.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.2/AionPresence-Setup-0.7.2.exe).
 2. Lancez l'installateur sur Windows 10 ou 11, puis ouvrez une fois **AION 2 Discord Presence** depuis le menu Démarrer pour activer le lancement automatique.
 3. Gardez l'application Discord de bureau ouverte. L'Application ID partagé et les images de la présence sont déjà configurés. Choisissez la langue et les informations affichées dans les paramètres.
 4. Pour détecter automatiquement le personnage sur Global, installez [Npcap depuis son site officiel](https://npcap.com/#download) séparément. Pendant l'installation, activez **WinPcap API-compatible Mode** et laissez **Restrict Npcap driver's access to Administrators only** désactivé. Rouvrez ensuite l'application.
 
-L'installation est requise et aucune fenêtre PowerShell ne s'ouvre. L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Vérifiez le fichier téléchargé avec sa [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.1/AionPresence-Setup-0.7.1.sha256).
+L'installation est requise et aucune fenêtre PowerShell ne s'ouvre. L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Vérifiez le fichier téléchargé avec sa [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.2/AionPresence-Setup-0.7.2.sha256).
 
 ### Captures d'écran
 
@@ -81,16 +81,16 @@ L'installation est requise et aucune fenêtre PowerShell ne s'ouvre. L'installat
 
 - Démarrage automatique et discret dans la zone de notification avec `Aion2.exe` ; arrêt à la fermeture du jeu.
 - Nom du personnage lu dans le titre de la fenêtre du jeu lorsque le client le fournit, avec un champ de secours.
-- Détection du client Global Steam grâce au dossier `Saved_Steam`. Avec Npcap installé, l'application lit le nom et la classe du personnage actif dans le trafic réseau local du jeu. Cette lecture a été vérifiée sur le serveur EU Israphel. Les champs enregistrés restent disponibles comme secours.
+- Détection du client Global Steam grâce au dossier `Saved_Steam`. Avec Npcap installé, l'application lit le personnage actif, sa classe, son niveau, son score d'équipement, sa région et sa position dans le trafic réseau local du jeu. Elle obtient le nom du serveur depuis la [recherche publique de personnages NCSOFT](https://aion2.plaync.com/). Les champs enregistrés restent disponibles comme secours.
 - Chrono fondé sur l'heure de démarrage du jeu, conservé si l'application de présence redémarre.
 - Interface et présence en français ou en anglais, avec choix individuel des informations affichées.
-- Régions Global EU, NA, SA et JP, ainsi que détection des clients TW et KR.
+- Régions Global EU, NA Est, NA Ouest, Amérique du Sud et Asie détectées automatiquement, ainsi que détection des clients TW et KR.
 - Image du jeu et icônes des classes, dont Brawler, dans la présence Discord.
 - Bouton Discord vers la page GitHub de la dernière version. Il est activé par défaut et désactivable dans **Paramètres → Visibilité**.
 - Recherche et installation des mises à jour depuis l'application. L'installation automatique est disponible dans **Paramètres → Mises à jour** et désactivée par défaut. L'installateur téléchargé est vérifié avec l'empreinte SHA-256 fournie par GitHub.
 - Aperçu local, préférences sauvegardées et comportement du bouton de fermeture au choix.
 
-Le nom du serveur EU Israphel est reconnu à partir de son identifiant vérifié dans le jeu. Les autres serveurs Global peuvent être saisis une fois en attendant la validation de leurs identifiants. Une reconnexion ou un changement de zone peut être nécessaire pour que le jeu transmette l'identité pendant que l'application est ouverte. L'identité détectée reste associée à la session de jeu, même si l'application redémarre. Le niveau, le niveau d'équipement, la zone et le groupe ne sont pas encore confirmés sur Global : ils restent masqués sans source de profil compatible. Npcap n'est pas inclus dans l'installateur.
+Les noms des serveurs Global sont recherchés avec le nom exact du personnage, l'identifiant du serveur et sa région. La recherche publique est actualisée au maximum toutes les cinq minutes. Une reconnexion ou un changement de zone peut être nécessaire pour que le jeu transmette l'identité pendant que l'application est ouverte. L'identité reste associée à la session de jeu, même si l'application redémarre. La session du jeu fournit le niveau et le score d'équipement (`GS`). La zone précise est vérifiée pour Safe Haven et Nornir Assembly ; les autres cartes reconnues affichent leur région générale, comme Altgard. La taille du groupe reste masquée sans source de profil compatible. Npcap n'est pas inclus dans l'installateur.
 
 ### Questions courantes
 

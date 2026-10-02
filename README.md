@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.7.3.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.3/AionPresence-Setup-0.7.3.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.7.4.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.4/AionPresence-Setup-0.7.4.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.3/AionPresence-Setup-0.7.3.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.4/AionPresence-Setup-0.7.4.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -48,7 +48,7 @@ Npcap is a separate prerequisite for Global detection. Without it, the app can s
 
 | Client or region | Current status |
 | --- | --- |
-| Global Steam, EU | Live character, class, level, gear score, server, region, and scene-location detection tested on an EU session. |
+| Global Steam, EU | Character, class, level, gear score, server, region, scene location, and five-player Party Finder membership tested on an EU session. |
 | Global NA East, NA West, South America, Asia | Region handling is implemented. Live detection has not yet been verified in each service region or on every server. |
 | Taiwan (TW) | Game detection and character name from the window title tested. Full Global network data detection is not validated on TW. |
 | Korea (KR) | Game/client detection is supported. Automatic character fields have not been validated in a KR session. |
@@ -60,6 +60,8 @@ Npcap is a separate prerequisite for Global detection. Without it, the app can s
 - **Character level and gear score (`GS`):** read from game session messages. These fields update when the game sends new values.
 - **Server region:** derived from the server ID. The **server name** is looked up through [NCSOFT's public character search](https://aion2.plaync.com/) using the character name, server ID, and region. Lookup depends on the public service and is refreshed at most every five minutes.
 - **Location after loading:** an offline catalog associates **553 destination IDs across 93 maps** with the client's English and French names. The app checks that the destination belongs to the reported map.
+- **Dungeon location:** a second catalog covers **82 dungeon map variants**, with English and French names. Instanced scene messages are supported, including Vakron Sky Island.
+- **Party Finder membership:** the app reads your own recruitment room's roster and member updates. It displays the current count and capacity, distinguishes the recruitment lobby from the dungeon group, and clears the count when you leave. The **Party** visibility option controls this field.
 - **Session timer:** based on the game process start time. Reopening the presence app while the same game session is running preserves the timer.
 
 Character identity and the last detected location are kept when the presence app restarts during the same game session. A new game session does not reuse an old location.
@@ -68,7 +70,7 @@ Character identity and the last detected location are kept when the presence app
 
 - Location detection follows the game's scene messages. The displayed place is the **last detected loaded destination**. Continuous updates while walking between areas are not yet verified.
 - A destination missing from the catalog shows a recognized map name. If the map is also unknown, the location stays hidden.
-- **Party size is not automatically detected by the built-in detector.** It stays hidden unless a compatible local profile source supplies it.
+- Party detection has been tested with a five-player Party Finder group on Global Steam EU. Manual groups, raids, TW/KR, and other regions have not been validated. After reopening the app, the count stays hidden until a fresh roster is received. Changes depend on membership messages sent by the game.
 - The catalog contains client data, but every destination has not been tested in a live session. The complete Global feature set is not yet verified across all clients, servers, and regions.
 
 ## Features and settings
@@ -92,7 +94,7 @@ Character identity and the last detected location are kept when the presence app
 | The game is detected but the client is unknown | Select Global, TW, or KR manually in Settings, according to the installed game version. |
 | The server name is empty | The public NCSOFT lookup may be unavailable or may not return the character. A saved server field can be used as a fallback. |
 | The location does not change while walking | This behavior is not yet validated. The app currently follows scene messages and keeps the last detected loaded destination. |
-| The party does not appear | Automatic party detection is not available in the built-in detector. |
+| The party does not appear | Enable Party in the visibility settings and keep the app running before joining a Party Finder room. A fresh roster is needed after reopening the app. Other group types are not yet validated. |
 | There is no presence on Discord | Keep Discord desktop open and signed in, verify that activity sharing is enabled in Discord, and make sure monitoring is running in the presence app. |
 | The window closes but the app remains running | Your close-button preference may minimize it. Use the notification icon's Quit action for a full exit. |
 
@@ -140,7 +142,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.7.3.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.3/AionPresence-Setup-0.7.3.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.7.4.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.4/AionPresence-Setup-0.7.4.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -149,7 +151,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.3/AionPresence-Setup-0.7.3.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.4/AionPresence-Setup-0.7.4.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -168,7 +170,7 @@ Npcap est un prérequis séparé pour la détection Global. Sans lui, l'applicat
 
 | Client ou région | État actuel |
 | --- | --- |
-| Global Steam, EU | Lecture du personnage, de la classe, du niveau, du score d'équipement, du serveur, de la région et du lieu après chargement testée sur une session EU. |
+| Global Steam, EU | Lecture du personnage, de la classe, du niveau, du score d'équipement, du serveur, de la région, du lieu et des membres d'un groupe de cinq joueurs du Party Finder testée sur une session EU. |
 | Global NA Est, NA Ouest, Amérique du Sud, Asie | Gestion des régions intégrée. La détection réelle n'a pas encore été vérifiée dans chaque région de service ou sur chaque serveur. |
 | Taïwan (TW) | Détection du jeu et lecture du nom dans le titre de fenêtre testées. La détection réseau complète de Global n'est pas validée sur TW. |
 | Corée (KR) | Détection du jeu et du client prise en charge. Les champs automatiques du personnage n'ont pas été validés dans une session KR. |
@@ -180,6 +182,8 @@ Npcap est un prérequis séparé pour la détection Global. Sans lui, l'applicat
 - **Niveau du personnage et score d'équipement (`GS`) :** lus dans les messages du jeu. Ces champs s'actualisent lorsque le jeu transmet de nouvelles valeurs.
 - **Région du serveur :** déterminée depuis l'identifiant du serveur. Son **nom** est recherché dans la [recherche publique de personnages NCSOFT](https://aion2.plaync.com/) avec le nom du personnage, l'identifiant du serveur et la région. Cette recherche dépend du service public et s'actualise au maximum toutes les cinq minutes.
 - **Lieu après chargement :** le catalogue local associe **553 identifiants de destination sur 93 cartes** aux noms français et anglais du client. L'application vérifie que la destination appartient à la carte transmise.
+- **Lieu en donjon :** un second catalogue couvre **82 variantes de cartes de donjon**, avec leurs noms français et anglais. Les messages de chargement en instance sont pris en charge, dont ceux de l'Île Céleste de Vakron.
+- **Membres du Party Finder :** l'application lit la liste de votre propre salon et ses mises à jour. Elle affiche le nombre actuel de membres et la capacité, distingue le salon de recrutement du groupe en donjon et efface le compteur à votre départ. L'option d'affichage **Groupe** contrôle ce champ.
 - **Chrono de session :** fondé sur l'heure de lancement du processus du jeu. Rouvrir l'application pendant la même session conserve le chrono.
 
 L'identité du personnage et le dernier lieu détecté sont conservés si l'application redémarre pendant la même session de jeu. Une nouvelle session ne reprend pas l'ancien lieu.
@@ -188,7 +192,7 @@ L'identité du personnage et le dernier lieu détecté sont conservés si l'appl
 
 - La détection du lieu suit les messages de chargement du jeu. Le lieu affiché est la **dernière destination chargée détectée**. Les changements continus à pied entre les lieux ne sont pas encore validés.
 - Une destination absente du catalogue affiche le nom de la carte si elle est reconnue. Si la carte est également inconnue, le lieu reste masqué.
-- **La taille du groupe n'est pas détectée automatiquement par le détecteur intégré.** Elle reste masquée sans source de profil locale compatible.
+- La détection du groupe a été testée avec un groupe de cinq joueurs rejoint par le Party Finder sur Global Steam EU. Les groupes manuels, raids, clients TW/KR et autres régions restent à valider. Après une réouverture de l'application, le compteur reste masqué jusqu'à réception d'une nouvelle liste. Les changements dépendent des messages de membres transmis par le jeu.
 - Le catalogue provient des données du client, mais chaque destination n'a pas été testée en jeu. L'ensemble des fonctions Global n'est pas encore vérifié sur tous les clients, serveurs et régions.
 
 ### Fonctions et paramètres
@@ -212,7 +216,7 @@ L'identité du personnage et le dernier lieu détecté sont conservés si l'appl
 | Le jeu est détecté, mais son client est inconnu | Sélectionnez Global, TW ou KR manuellement dans les paramètres, selon votre version du jeu. |
 | Le nom du serveur reste vide | La recherche publique NCSOFT peut être indisponible ou ne pas retourner le personnage. Le champ serveur enregistré peut servir de secours. |
 | Le lieu ne change pas en marchant | Ce comportement n'est pas encore validé. L'application suit actuellement les messages de chargement et garde la dernière destination chargée détectée. |
-| Le groupe n'apparaît pas | La détection automatique du groupe n'est pas disponible dans le détecteur intégré. |
+| Le groupe n'apparaît pas | Activez Groupe dans les options d'affichage et gardez l'application ouverte avant de rejoindre un salon du Party Finder. Une nouvelle liste est nécessaire après réouverture. Les autres types de groupes restent à valider. |
 | Aucune présence n'apparaît sur Discord | Gardez Discord de bureau ouvert avec votre compte connecté, vérifiez que le partage d'activité est activé dans Discord et que la surveillance est démarrée dans l'application. |
 | La fenêtre se ferme, mais l'application reste active | Le bouton de fermeture peut être configuré pour réduire l'application. Utilisez Quitter depuis son icône de notification pour la fermer complètement. |
 

@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.0.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.1/AionPresence-Setup-0.8.1.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.1/AionPresence-Setup-0.8.1.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -65,7 +65,7 @@ Npcap is a separate prerequisite for Global detection. Without it, the app can s
 - **Dungeon location:** a second catalog covers **82 dungeon map variants**, with English and French names. Instanced scene messages are supported, including Vakron Sky Island.
 - **Party membership:** the app reads your own Party Finder room's roster and member updates. It displays the count and capacity, distinguishes the recruitment lobby from the dungeon group, and clears the count when you leave. Initial support for normal parties outside the Party Finder is also included, with a solo normal party tested on Global Steam EU. The **Party** visibility option controls this field.
 - **Party display:** Party or Lobby and the native member counter occupy their own presence line. Character and location information share the preceding line while grouped. The timer remains separate.
-- **Region and server:** compact format such as `EU · Israphel`. It appears below character information outside a group, or alongside character information when the group occupies its own line. Empty or hidden fields leave no separator behind.
+- **Region and server:** compact format such as `EU · Israphel - Safe Haven`. The zone shows only its name and uses a hyphen separator. It appears below character information outside a group, or alongside character information when the group occupies its own line. Empty or hidden fields leave no separator behind.
 - **Session timer:** based on the game process start time. Reopening the presence app while the same game session is running preserves the timer.
 
 Character identity and the last detected location are kept when the presence app restarts during the same game session. A new game session does not reuse an old location.
@@ -146,7 +146,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.0.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.1.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.1/AionPresence-Setup-0.8.1.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -155,7 +155,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.1/AionPresence-Setup-0.8.1.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -191,7 +191,7 @@ Npcap est un prérequis séparé pour la détection Global. Sans lui, l'applicat
 - **Lieu en donjon :** un second catalogue couvre **82 variantes de cartes de donjon**, avec leurs noms français et anglais. Les messages de chargement en instance sont pris en charge, dont ceux de l'Île Céleste de Vakron.
 - **Membres du groupe :** l'application lit la liste de votre propre salon du Party Finder et ses mises à jour. Elle affiche le nombre de membres et la capacité, distingue le salon de recrutement du groupe en donjon et efface le compteur à votre départ. Une première prise en charge des groupes classiques hors Party Finder est aussi incluse, avec un groupe solo classique testé sur Global Steam EU. L'option d'affichage **Groupe** contrôle ce champ.
 - **Affichage du groupe :** Groupe ou Salon et le compteur natif occupent leur propre ligne dans la présence. Les informations du personnage et du lieu sont réunies sur la ligne précédente lorsque vous êtes en groupe. Le chronomètre reste séparé.
-- **Région et serveur :** format compact comme `EU · Israphel`, sous les informations du personnage hors groupe, ou avec le personnage lorsque le groupe occupe sa propre ligne. Les champs vides ou masqués ne laissent aucun séparateur.
+- **Région et serveur :** format compact comme `EU · Israphel - Safe Haven`, avec uniquement le nom de la zone et un trait d'union pour la séparer du serveur, sous les informations du personnage hors groupe, ou avec le personnage lorsque le groupe occupe sa propre ligne. Les champs vides ou masqués ne laissent aucun séparateur.
 - **Chrono de session :** fondé sur l'heure de lancement du processus du jeu. Rouvrir l'application pendant la même session conserve le chrono.
 
 L'identité du personnage et le dernier lieu détecté sont conservés si l'application redémarre pendant la même session de jeu. Une nouvelle session ne reprend pas l'ancien lieu.

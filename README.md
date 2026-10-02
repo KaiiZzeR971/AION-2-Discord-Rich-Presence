@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.7.9.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.9/AionPresence-Setup-0.7.9.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.0.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.9/AionPresence-Setup-0.7.9.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -58,6 +58,8 @@ Npcap is a separate prerequisite for Global detection. Without it, the app can s
 
 - **Character name and class:** read from the active game session when its identity message arrives. A login or scene transition may be necessary for the first detection.
 - **Character level and item level (`iLvl`):** read from game session messages. These fields update when the game sends new values.
+- **Combat Power (`CP`):** read from your own Global character or group messages. Enabled by default; item level is disabled by default and can be enabled independently in Settings. Missing values remain hidden. The last received CP is kept across app restarts within the same game session.
+- **CP formatting:** game-style compact values such as `CP 67.25K` and `CP 1.23M`, with the complete number retained internally.
 - **Server region:** derived from the server ID. The **server name** is looked up through [NCSOFT's public character search](https://aion2.plaync.com/) using the character name, server ID, and region. Lookup depends on the public service and is refreshed at most every five minutes.
 - **Location after loading:** an offline catalog associates **553 destination IDs across 93 maps** with the client's English and French names. The app checks that the destination belongs to the reported map.
 - **Dungeon location:** a second catalog covers **82 dungeon map variants**, with English and French names. Instanced scene messages are supported, including Vakron Sky Island.
@@ -144,7 +146,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.7.9.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.9/AionPresence-Setup-0.7.9.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.0.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -153,7 +155,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.7.9/AionPresence-Setup-0.7.9.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.0/AionPresence-Setup-0.8.0.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -182,6 +184,8 @@ Npcap est un prérequis séparé pour la détection Global. Sans lui, l'applicat
 
 - **Nom du personnage et classe :** lus dans la session active lorsque le jeu transmet son message d'identité. Une connexion ou une transition peut être nécessaire pour la première détection.
 - **Niveau du personnage et niveau d'équipement (`iLvl`) :** lus dans les messages du jeu. Ces champs s'actualisent lorsque le jeu transmet de nouvelles valeurs.
+- **Puissance de combat (`CP`) :** lue dans les messages de votre propre personnage ou groupe sur Global. Activée par défaut ; l'iLvl est désactivé par défaut et peut être activé indépendamment dans les paramètres. Les valeurs indisponibles restent masquées. Le dernier CP reçu est conservé lors d'un redémarrage de l'application pendant la même session de jeu.
+- **Format du CP :** valeurs compactes comme dans le jeu, par exemple `CP 67.25K` et `CP 1.23M`, avec conservation du nombre complet en interne.
 - **Région du serveur :** déterminée depuis l'identifiant du serveur. Son **nom** est recherché dans la [recherche publique de personnages NCSOFT](https://aion2.plaync.com/) avec le nom du personnage, l'identifiant du serveur et la région. Cette recherche dépend du service public et s'actualise au maximum toutes les cinq minutes.
 - **Lieu après chargement :** le catalogue local associe **553 identifiants de destination sur 93 cartes** aux noms français et anglais du client. L'application vérifie que la destination appartient à la carte transmise.
 - **Lieu en donjon :** un second catalogue couvre **82 variantes de cartes de donjon**, avec leurs noms français et anglais. Les messages de chargement en instance sont pris en charge, dont ceux de l'Île Céleste de Vakron.

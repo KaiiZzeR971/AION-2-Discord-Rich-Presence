@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.5.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.5/AionPresence-Setup-0.8.5.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.6.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.6/AionPresence-Setup-0.8.6.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.5/AionPresence-Setup-0.8.5.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.6/AionPresence-Setup-0.8.6.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -148,7 +148,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.5.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.5/AionPresence-Setup-0.8.5.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.6.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.6/AionPresence-Setup-0.8.6.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -157,7 +157,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.5/AionPresence-Setup-0.8.5.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.6/AionPresence-Setup-0.8.6.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 

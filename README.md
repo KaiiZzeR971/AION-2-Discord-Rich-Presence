@@ -20,16 +20,16 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.7.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.7/AionPresence-Setup-0.8.7.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.8.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
-5. Keep Discord desktop open, then start AION 2 and connect to your character. Automatic launch with the game is enabled by default after the first app launch.
-6. If you installed the app while already in game, a new character login or a teleport may be needed before the game sends the first character and location data. No name or server entry is required when automatic detection succeeds.
+5. Keep Discord desktop open. You can open the app while AION 2 is already running, or start the game afterwards. Automatic launch with the game is enabled by default after the first app launch.
+6. With the game already running, the presence can show its artwork and game timer immediately. A saved profile from the same game session restores character details. On a first installation without a profile, character fields remain hidden until a new identity message arrives; a character login or teleport may be needed. No name or server entry is required when automatic detection succeeds.
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.7/AionPresence-Setup-0.8.7.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -68,7 +68,7 @@ Npcap is a separate prerequisite for Global detection. Without it, the app can s
 - **Region and server:** compact format such as `EU · Israphel - Safe Haven`. The zone shows only its name and uses a hyphen separator. It appears below character information outside a group, or alongside character information when the group occupies its own line. Empty or hidden fields leave no separator behind.
 - **Session timer:** based on the game process start time. Reopening the presence app while the same game session is running preserves the timer.
 
-Character identity and the last detected location are kept when the presence app restarts during the same game session. A new game session does not reuse an old location.
+Character identity, class, level, item level, CP, server and the last detected map are restored when the app restarts during the same game session. The cached server remains available if the online search cannot be reached. A new game session does not reuse an old profile. On a fresh late start, the game presence works while automatic character details are pending; previously sent packets cannot be recovered.
 
 ### Current limitations
 
@@ -148,16 +148,16 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.7.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.7/AionPresence-Setup-0.8.7.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.8.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
-5. Gardez Discord de bureau ouvert, puis lancez AION 2 et connectez votre personnage. Le lancement automatique avec le jeu est activé par défaut après la première ouverture de l'application.
-6. Si le jeu était déjà ouvert pendant l'installation, une nouvelle connexion au personnage ou une téléportation peut être nécessaire pour recevoir les premières données du personnage et du lieu. Aucun nom de personnage ou de serveur n'est à saisir lorsque la détection automatique fonctionne.
+5. Gardez Discord de bureau ouvert. Vous pouvez ouvrir l'application alors qu'AION 2 tourne déjà, ou lancer le jeu ensuite. Le lancement automatique avec le jeu est activé par défaut après la première ouverture de l'application.
+6. Si le jeu tourne déjà, la présence peut afficher immédiatement son image et son chrono. Un profil sauvegardé pendant la même session permet de retrouver les détails du personnage. Lors d'une première installation sans profil, ces champs restent masqués jusqu'à un nouveau message d'identité ; une reconnexion au personnage ou une téléportation peut être nécessaire. Aucun nom de personnage ou de serveur n'est à saisir lorsque la détection automatique fonctionne.
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.7/AionPresence-Setup-0.8.7.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -196,7 +196,7 @@ Npcap est un prérequis séparé pour la détection Global. Sans lui, l'applicat
 - **Région et serveur :** format compact comme `EU · Israphel - Safe Haven`, avec uniquement le nom de la zone et un trait d'union pour la séparer du serveur, sous les informations du personnage hors groupe, ou avec le personnage lorsque le groupe occupe sa propre ligne. Les champs vides ou masqués ne laissent aucun séparateur.
 - **Chrono de session :** fondé sur l'heure de lancement du processus du jeu. Rouvrir l'application pendant la même session conserve le chrono.
 
-L'identité du personnage et le dernier lieu détecté sont conservés si l'application redémarre pendant la même session de jeu. Une nouvelle session ne reprend pas l'ancien lieu.
+L'identité du personnage, la classe, le niveau, l'iLvl, le CP, le serveur et la dernière carte détectée sont restaurés si l'application redémarre pendant la même session de jeu. Le serveur sauvegardé reste disponible si la recherche en ligne échoue. Une nouvelle session ne reprend pas l'ancien profil. Lors d'un premier lancement en cours de partie, la présence du jeu fonctionne en attendant les détails automatiques du personnage ; les messages déjà transmis ne peuvent pas être récupérés.
 
 ### Limites actuelles
 

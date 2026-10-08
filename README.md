@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.12.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.12/AionPresence-Setup-0.8.12.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.13.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.13/AionPresence-Setup-0.8.13.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.12/AionPresence-Setup-0.8.12.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.13/AionPresence-Setup-0.8.13.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -69,7 +69,7 @@ You can install the presence app on another local disk, including folders with s
 - **Party display:** Party or Lobby and the native member counter occupy their own presence line. Character and location information share the preceding line while grouped. The timer remains separate.
 - **Region and server:** compact format such as `EU · Israphel - Safe Haven`. The zone shows only its name and uses a hyphen separator. It appears below character information outside a group, or alongside character information when the group occupies its own line. Empty or hidden fields leave no separator behind.
 - **Crafting:** while a recognized recipe is being crafted, the second line shows **Crafting** and the crafting icon replaces the class icon. The location and class return after the last result. No item count is shared. Enabled by default and configurable in Settings; crafting takes priority over the location and party line.
-- **Gathering:** after each recognized gathering result, the second line shows **Gathering · zone** and the gathering icon replaces the class icon. Region and server are temporarily hidden. The status remains for 30 seconds after the last action; another action refreshes it. Resource names and quantities are never shared. Enabled by default and configurable in Settings. A scene or character change clears it.
+- **Gathering:** after each recognized gathering result, the second line shows **Gathering · zone** and the gathering icon replaces the class icon. Region and server are temporarily hidden. The status remains for 5 minutes after the last action; another action refreshes it. Resource names and quantities are never shared. Enabled by default and configurable in Settings. A scene or character change clears it.
 - **Session timer:** based on the game process start time. Reopening the presence app while the same game session is running preserves the timer.
 
 Character identity, class, level, item level, CP, server and the last detected map are restored when the app restarts during the same game session. The cached server remains available if the online search cannot be reached. A new game session does not reuse an old profile. On a fresh late start, the game presence works while automatic character details are pending; previously sent packets cannot be recovered.
@@ -159,7 +159,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.12.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.12/AionPresence-Setup-0.8.12.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.13.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.13/AionPresence-Setup-0.8.13.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -168,7 +168,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.12/AionPresence-Setup-0.8.12.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.13/AionPresence-Setup-0.8.13.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -208,7 +208,7 @@ Vous pouvez installer l'application de présence sur un autre disque local, y co
 - **Affichage du groupe :** Groupe ou Salon et le compteur natif occupent leur propre ligne dans la présence. Les informations du personnage et du lieu sont réunies sur la ligne précédente lorsque vous êtes en groupe. Le chronomètre reste séparé.
 - **Région et serveur :** format compact comme `EU · Israphel - Safe Haven`, avec uniquement le nom de la zone et un trait d'union pour la séparer du serveur, sous les informations du personnage hors groupe, ou avec le personnage lorsque le groupe occupe sa propre ligne. Les champs vides ou masqués ne laissent aucun séparateur.
 - **Fabrication :** pendant une recette reconnue, la deuxième ligne affiche **Fabrication en cours** et son icône remplace celle de la classe. Le lieu et la classe reviennent après le dernier résultat. Aucun nombre d’objets n’est partagé. Activée par défaut et configurable dans les paramètres ; la fabrication est prioritaire sur la ligne du lieu et du groupe.
-- **Récolte :** après chaque résultat de récolte reconnu, la deuxième ligne affiche **Récolte · zone** et l’icône de récolte remplace celle de la classe. Région et serveur sont temporairement masqués. Le statut reste 30 secondes après la dernière action ; une nouvelle action renouvelle ce délai. Aucun nom de ressource ni quantité n’est partagé. Activée par défaut et configurable dans les paramètres. Un changement de scène ou de personnage efface ce statut.
+- **Récolte :** après chaque résultat de récolte reconnu, la deuxième ligne affiche **Récolte · zone** et l’icône de récolte remplace celle de la classe. Région et serveur sont temporairement masqués. Le statut reste 5 minutes après la dernière action ; une nouvelle action renouvelle ce délai. Aucun nom de ressource ni quantité n’est partagé. Activée par défaut et configurable dans les paramètres. Un changement de scène ou de personnage efface ce statut.
 - **Chrono de session :** fondé sur l'heure de lancement du processus du jeu. Rouvrir l'application pendant la même session conserve le chrono.
 
 L'identité du personnage, la classe, le niveau, l'iLvl, le CP, le serveur et la dernière carte détectée sont restaurés si l'application redémarre pendant la même session de jeu. Le serveur sauvegardé reste disponible si la recherche en ligne échoue. Une nouvelle session ne reprend pas l'ancien profil. Lors d'un premier lancement en cours de partie, la présence du jeu fonctionne en attendant les détails automatiques du personnage ; les messages déjà transmis ne peuvent pas être récupérés.

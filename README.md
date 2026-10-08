@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.8.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.9.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.9/AionPresence-Setup-0.8.9.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.9/AionPresence-Setup-0.8.9.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -37,12 +37,14 @@ Download Npcap from its [official download page](https://npcap.com/#download) an
 
 | Npcap installer option | Selection for AION 2 Discord Presence |
 | --- | --- |
-| **WinPcap API-compatible Mode** | Enabled |
+| **WinPcap API-compatible Mode** | Optional; both standard and compatibility installations are supported |
 | **Restrict Npcap driver's access to Administrators only** | Disabled |
 
 The options are documented in the [official Npcap installation guide](https://npcap.com/guide/npcap-users-guide.html). Finish installation and restart Windows if requested. Then **quit the presence app completely from its notification icon and reopen it**. Closing the window may only minimize it, depending on your saved preference.
 
 Npcap is a separate prerequisite for Global detection. Without it, the app can still display the game timer, artwork, and available saved fallback fields. TW window-title name detection does not require Npcap. The full Global data detector has not been validated on TW or KR.
+
+You can install the presence app on another local disk, including folders with spaces and accented characters. The game and the presence app do not need to be on the same drive. Global detection does not use translated menu text; the game's language and the presence language are independent.
 
 ## Compatibility and detection
 
@@ -95,13 +97,15 @@ Default visibility: character, CP, class icon, region, server, zone, timer, game
 | Problem | What to check |
 | --- | --- |
 | Global automatic detection says Npcap is missing | Install Npcap with the settings above, quit the presence app from its notification icon, and reopen it. |
-| Capture is unavailable | Check Npcap's compatibility and access settings. If you previously selected administrator-only access, reinstall Npcap with that option off, then reopen the app. Follow any reboot request from Npcap. |
+| Capture is unavailable | Check Npcap's access settings. If you previously selected administrator-only access, reinstall Npcap with that option off, then reopen the app. Follow any reboot request from Npcap. |
 | The character or location is still empty | Keep the presence app running, log in to your character or teleport once, and wait for the app to refresh. Check the client selection in Settings. |
+| The GitHub button appears but character details are missing | Check that Character and the other desired fields are enabled in Settings. Compare the local preview: if it is empty too, keep the app running and reconnect your character so it can receive fresh data. |
 | The game is detected but the client is unknown | Select Global, TW, or KR manually in Settings, according to the installed game version. |
 | The server name is empty | The public NCSOFT lookup may be unavailable or may not return the character. A saved server field can be used as a fallback. |
 | The location does not change while walking | This behavior is not yet validated. The app currently follows scene messages and keeps the last detected loaded destination. |
 | The party does not appear | Enable Party in the visibility settings and keep the app running before creating or joining a group. A recognized fresh roster is needed after reopening the app. Normal-party support is currently limited to validated message formats. |
 | There is no presence on Discord | Keep Discord desktop open and signed in, verify that activity sharing is enabled in Discord, and make sure monitoring is running in the presence app. |
+| The app says Presence active, but the profile shows nothing | Discord accepted the activity command, but profile visibility also depends on Discord's global activity sharing, the game's individual sharing setting and server privacy settings. See [Discord's activity sharing guide](https://support.discord.com/hc/en-us/articles/7931156448919-Activity-Sharing-on-Discord-FAQ). |
 | The window closes but the app remains running | Your close-button preference may minimize it. Use the notification icon's Quit action for a full exit. |
 
 If a problem continues, open an [issue](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/issues) with the app version, Windows version, game client/region, and the message shown in the app. Screenshots can help; hide personal information before attaching them.
@@ -148,7 +152,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.8.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.9.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.9/AionPresence-Setup-0.8.9.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -157,7 +161,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.8/AionPresence-Setup-0.8.8.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.9/AionPresence-Setup-0.8.9.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -165,12 +169,14 @@ Téléchargez Npcap depuis sa [page officielle](https://npcap.com/#download), pu
 
 | Option de l'installateur Npcap | Choix pour AION 2 Discord Presence |
 | --- | --- |
-| **WinPcap API-compatible Mode** | Activée |
+| **WinPcap API-compatible Mode** | Facultative ; les installations standard et compatible sont prises en charge |
 | **Restrict Npcap driver's access to Administrators only** | Désactivée |
 
 Les options sont décrites dans le [guide officiel de Npcap](https://npcap.com/guide/npcap-users-guide.html). Terminez l'installation et redémarrez Windows si cela vous est demandé. Ensuite, **quittez complètement l'application de présence depuis son icône près de l'horloge, puis relancez-la**. Fermer sa fenêtre peut seulement la réduire, selon votre préférence enregistrée.
 
 Npcap est un prérequis séparé pour la détection Global. Sans lui, l'application peut afficher le chrono, les images et les champs de secours enregistrés disponibles. La lecture du nom dans le titre de fenêtre TW ne nécessite pas Npcap. La détection complète des données Global n'a pas été validée sur TW ou KR.
+
+Vous pouvez installer l'application de présence sur un autre disque local, y compris dans un dossier avec espaces et accents. Le jeu et l'application n'ont pas besoin d'être sur le même disque. La détection Global n'utilise pas les textes des menus ; la langue du jeu et celle de la présence sont indépendantes.
 
 ### Compatibilité et détection
 
@@ -223,13 +229,15 @@ Affichage initial : personnage, CP, icône de classe, région, serveur, zone, ch
 | Problème | Vérifications |
 | --- | --- |
 | La détection Global indique que Npcap manque | Installez Npcap avec les réglages ci-dessus, quittez l'application depuis son icône de notification, puis relancez-la. |
-| La capture est indisponible | Vérifiez les réglages de compatibilité et d'accès de Npcap. Si l'accès était réservé aux administrateurs, réinstallez Npcap avec cette option désactivée, puis relancez l'application. Respectez toute demande de redémarrage de Npcap. |
+| La capture est indisponible | Vérifiez les réglages d'accès de Npcap. Si l'accès était réservé aux administrateurs, réinstallez Npcap avec cette option désactivée, puis relancez l'application. Respectez toute demande de redémarrage de Npcap. |
 | Le personnage ou le lieu reste vide | Gardez l'application ouverte, connectez votre personnage ou téléportez-vous une fois, puis attendez l'actualisation. Vérifiez le choix du client dans les paramètres. |
+| Le bouton GitHub apparaît mais les détails du personnage manquent | Vérifiez que Personnage et les autres champs souhaités sont activés dans les paramètres. Comparez l'aperçu local : s'il est également vide, gardez l'application ouverte et reconnectez votre personnage pour recevoir de nouvelles données. |
 | Le jeu est détecté, mais son client est inconnu | Sélectionnez Global, TW ou KR manuellement dans les paramètres, selon votre version du jeu. |
 | Le nom du serveur reste vide | La recherche publique NCSOFT peut être indisponible ou ne pas retourner le personnage. Le champ serveur enregistré peut servir de secours. |
 | Le lieu ne change pas en marchant | Ce comportement n'est pas encore validé. L'application suit actuellement les messages de chargement et garde la dernière destination chargée détectée. |
 | Le groupe n'apparaît pas | Activez Groupe dans les options d'affichage et gardez l'application ouverte avant de créer ou rejoindre un groupe. Une nouvelle liste reconnue est nécessaire après réouverture. La prise en charge des groupes classiques est actuellement limitée aux formats de messages validés. |
 | Aucune présence n'apparaît sur Discord | Gardez Discord de bureau ouvert avec votre compte connecté, vérifiez que le partage d'activité est activé dans Discord et que la surveillance est démarrée dans l'application. |
+| L'application indique Présence active mais le profil n'affiche rien | Discord a accepté la commande, mais son affichage dépend aussi du partage global d'activité, du réglage propre au jeu et de la confidentialité du serveur. Consultez le [guide du partage d'activité de Discord](https://support.discord.com/hc/fr/articles/7931156448919-FAQ-sur-le-partage-d-activit%C3%A9-sur-Discord). |
 | La fenêtre se ferme, mais l'application reste active | Le bouton de fermeture peut être configuré pour réduire l'application. Utilisez Quitter depuis son icône de notification pour la fermer complètement. |
 
 Si le problème persiste, ouvrez une [issue](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/issues) avec les versions de l'application et de Windows, le client et la région du jeu, ainsi que le message affiché dans l'application. Vous pouvez ajouter une capture en masquant les informations personnelles.

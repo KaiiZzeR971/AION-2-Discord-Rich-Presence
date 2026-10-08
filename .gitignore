@@ -2,8 +2,8 @@
 !.gitignore
 !README.md
 !LICENSE.txt
-!AionPresence-Setup-0.8.10.exe
-!AionPresence-Setup-0.8.10.sha256
+!AionPresence-Setup-0.8.11.exe
+!AionPresence-Setup-0.8.11.sha256
 !images/
 !images/overview-en.png
 !images/settings-en.png
@@ -15,3 +15,4 @@
 !images/updates-fr.png
 
 !images/crafting.png
+!images/gathering.png

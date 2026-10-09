@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.14.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.14/AionPresence-Setup-0.8.14.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.15.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.15/AionPresence-Setup-0.8.15.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.14/AionPresence-Setup-0.8.14.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.15/AionPresence-Setup-0.8.15.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -68,7 +68,7 @@ You can install the presence app on another local disk, including folders with s
 - **Party membership:** the app reads your own Party Finder room's roster and member updates. It displays the count and capacity, distinguishes the recruitment lobby from the dungeon group, and clears the count when you leave. Normal parties and 20-player forces are supported, including forces created directly or converted from a party. The counter follows the zone on the second line, including during gathering; region and server are hidden while the counter is displayed. The **Party** visibility option controls this field.
 - **Party display:** the native member counter follows the zone on the second presence line, for example `Vakron Sky Island (4/5)`. Character information stays on the first line; region and server are hidden while the party is displayed. If the zone is unavailable or hidden, Party or Lobby is used before the counter. The timer remains separate.
 - **Region and server:** compact format such as `EU · Israphel - Safe Haven` outside a displayed party. The zone shows only its name and uses a hyphen separator. Empty or hidden fields leave no separator behind.
-- **Crafting:** while a recognized recipe is being crafted, the second line shows **Crafting** and the crafting icon replaces the class icon. The location and class return after the last result. No item count is shared. Enabled by default and configurable in Settings; crafting takes priority over the location and party line.
+- **Crafting:** while a recognized recipe is being crafted, the second line shows **Crafting · zone** and the crafting icon replaces the class icon. Hidden or unavailable zones are omitted. The usual location display and class icon return after the last result. No item count is shared. Enabled by default and configurable in Settings; region, server and party count stay hidden during crafting.
 - **Gathering:** after each recognized gathering result, the second line shows **Gathering · zone** and the gathering icon replaces the class icon. Region and server are temporarily hidden. The status remains for 5 minutes after the last action; another action refreshes it. Resource names and quantities are never shared. If Party is enabled, its native member counter follows the gathering line, for example `Gathering · Safe Haven (4/5)`. Enabled by default and configurable in Settings. A scene or character change clears it.
 - **Session timer:** based on the game process start time. Reopening the presence app while the same game session is running preserves the timer.
 
@@ -159,7 +159,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.14.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.14/AionPresence-Setup-0.8.14.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.15.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.15/AionPresence-Setup-0.8.15.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -168,7 +168,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.14/AionPresence-Setup-0.8.14.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.15/AionPresence-Setup-0.8.15.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -207,7 +207,7 @@ Vous pouvez installer l'application de présence sur un autre disque local, y co
 - **Membres du groupe :** l'application lit la liste de votre propre salon du Party Finder et ses mises à jour. Elle affiche le nombre de membres et la capacité, distingue le salon de recrutement du groupe en donjon et efface le compteur à votre départ. Les groupes classiques et troupes de 20 joueurs sont pris en charge, y compris les troupes créées directement ou issues d'un groupe. Le compteur suit la zone sur la deuxième ligne, y compris pendant la récolte ; région et serveur sont masqués lorsque le compteur est affiché. L'option d'affichage **Groupe** contrôle ce champ.
 - **Affichage du groupe :** le compteur natif suit la zone sur la deuxième ligne, par exemple `Île Céleste de Vakron (4/5)`. Les informations du personnage restent sur la première ligne ; région et serveur sont masqués lorsque le groupe est affiché. Si la zone est inconnue ou masquée, Groupe ou Salon précède le compteur. Le chronomètre reste séparé.
 - **Région et serveur :** format compact comme `EU · Israphel - Safe Haven` hors groupe affiché, avec uniquement le nom de la zone et un trait d'union pour la séparer du serveur. Les champs vides ou masqués ne laissent aucun séparateur.
-- **Fabrication :** pendant une recette reconnue, la deuxième ligne affiche **Fabrication en cours** et son icône remplace celle de la classe. Le lieu et la classe reviennent après le dernier résultat. Aucun nombre d’objets n’est partagé. Activée par défaut et configurable dans les paramètres ; la fabrication est prioritaire sur la ligne du lieu et du groupe.
+- **Fabrication :** pendant une recette reconnue, la deuxième ligne affiche **Fabrication en cours · zone** et son icône remplace celle de la classe. Les zones masquées ou inconnues ne sont pas affichées. L’affichage habituel du lieu et l’icône de classe reviennent après le dernier résultat. Aucun nombre d’objets n’est partagé. Activée par défaut et configurable dans les paramètres ; région, serveur et compteur de groupe restent masqués pendant la fabrication.
 - **Récolte :** après chaque résultat de récolte reconnu, la deuxième ligne affiche **Récolte · zone** et l’icône de récolte remplace celle de la classe. Région et serveur sont temporairement masqués. Le statut reste 5 minutes après la dernière action ; une nouvelle action renouvelle ce délai. Aucun nom de ressource ni quantité n’est partagé. Activée par défaut et configurable dans les paramètres. Si l’option Groupe est activée, son compteur suit la ligne de récolte, par exemple `Récolte · Safe Haven (4/5)`. Un changement de scène ou de personnage efface ce statut.
 - **Chrono de session :** fondé sur l'heure de lancement du processus du jeu. Rouvrir l'application pendant la même session conserve le chrono.
 

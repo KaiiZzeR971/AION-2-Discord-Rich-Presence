@@ -17,3 +17,6 @@
 !catalog/
 !catalog/latest.json
 !catalog/global-*.json
+
+!images/diagnostic-en.png
+!images/diagnostic-fr.png

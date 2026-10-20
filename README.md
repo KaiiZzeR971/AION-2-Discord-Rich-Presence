@@ -20,7 +20,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 ## Download and first setup
 
-1. Download [AionPresence-Setup-0.8.16.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.16/AionPresence-Setup-0.8.16.exe) from this repository's Releases.
+1. Download [AionPresence-Setup-0.8.17.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.17/AionPresence-Setup-0.8.17.exe) from this repository's Releases.
 2. Run the installer. Installation is required. The app is installed for your Windows account and added to the Start menu.
 3. For Global automatic detection, complete the [Npcap setup](#npcap-setup-for-global) below before starting the game.
 4. Open **AION 2 Discord Presence** from the Start menu once. Select **EN** or **FR**, leave the client selection on **Auto**, and choose which fields to display in Settings.
@@ -29,7 +29,7 @@ A Discord developer account is not required. The shared Application ID and game/
 
 After setup, the app launches quietly near the Windows clock when the game starts. You can open its window from the notification icon. Preferences are saved automatically. Unavailable data and disabled fields are omitted from the presence.
 
-The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.16/AionPresence-Setup-0.8.16.sha256) is provided alongside the installer.
+The installer is currently **unsigned**, so Windows may display a warning. A [SHA-256 checksum](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.17/AionPresence-Setup-0.8.17.sha256) is provided alongside the installer.
 
 ## Npcap setup for Global
 
@@ -100,8 +100,13 @@ Default visibility: character, CP, class icon, region, server, zone, party, craf
 - A Discord button linking to this project's latest release. Enabled by default and configurable in **Settings → Visibility**.
 - In-app updates under **Settings → Updates**. Automatic installation is **on by default** for new settings; saved choices are preserved. Background checks run at most every six hours in either mode. If automatic installation is disabled, a Windows notification announces available updates. After installation, a notification confirms the installed version. Downloads are checked against GitHub's SHA-256 digest.
 - Local Discord preview and manual fallback fields.
+- **Privacy mode** from the notification icon menu. Temporarily hide the character, statistics and location without changing saved visibility choices. The game, timer, generic activity and enabled party counter remain available. Disabled by default; once enabled, it stays active across app restarts until unchecked.
+- **Local diagnostics** from the main window or notification icon menu. Check the game, Discord, Npcap, monitoring, received fields, visibility and location catalog without interrupting the presence. Preview and export an anonymized UTF-8 text report. Reports are never sent automatically and exclude character values, local paths, IP addresses, identifiers and raw error details.
+- **Support the project** in the sidebar opens [KaiiZzeR971's Ko-fi page](https://ko-fi.com/kaiizer971) in your browser.
 
 ## Troubleshooting
+
+Start with **Diagnostics** in the main window or notification icon menu. Review its suggested checks and preview the report before exporting it for support. If details are hidden, also check whether Privacy mode is enabled.
 
 | Problem | What to check |
 | --- | --- |
@@ -128,6 +133,8 @@ If a problem continues, open an [issue](https://github.com/KaiiZzeR971/AION-2-Di
 ![Update settings with automatic updates on by default](images/updates-en.png)
 
 ![Visibility settings, including the GitHub button](images/visibility-en.png)
+
+![Local diagnostics](images/diagnostic-en.png)
 
 ## FAQ
 
@@ -161,7 +168,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 ### Télécharger et configurer
 
-1. Téléchargez [AionPresence-Setup-0.8.16.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.16/AionPresence-Setup-0.8.16.exe) depuis les Releases de ce dépôt.
+1. Téléchargez [AionPresence-Setup-0.8.17.exe](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.17/AionPresence-Setup-0.8.17.exe) depuis les Releases de ce dépôt.
 2. Lancez l'installateur. L'installation est obligatoire. L'application est installée pour votre compte Windows et ajoutée au menu Démarrer.
 3. Pour la détection automatique sur Global, effectuez la [configuration Npcap](#configuration-de-npcap-pour-global) ci-dessous avant de lancer le jeu.
 4. Ouvrez une première fois **AION 2 Discord Presence** depuis le menu Démarrer. Choisissez **FR** ou **EN**, laissez la version du client sur **Auto** et choisissez les champs à afficher dans les paramètres.
@@ -170,7 +177,7 @@ Aucun compte développeur Discord n'est nécessaire. L'Application ID partagé e
 
 Après cette configuration, l'application démarre discrètement près de l'horloge Windows avec le jeu. Son icône de notification permet de rouvrir la fenêtre. Les préférences sont sauvegardées automatiquement. Les champs indisponibles ou désactivés sont omis de la présence.
 
-L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.16/AionPresence-Setup-0.8.16.sha256) accompagne l'installateur.
+L'installateur est actuellement **non signé** ; Windows peut afficher un avertissement. Une [somme SHA-256](https://github.com/KaiiZzeR971/AION-2-Discord-Rich-Presence/releases/download/v0.8.17/AionPresence-Setup-0.8.17.sha256) accompagne l'installateur.
 
 ### Configuration de Npcap pour Global
 
@@ -241,8 +248,13 @@ Affichage initial : personnage, CP, icône de classe, région, serveur, zone, gr
 - Bouton Discord vers la dernière Release du projet, activé par défaut et configurable dans **Paramètres → Visibilité**.
 - Mises à jour intégrées dans **Paramètres → Mises à jour**. L'installation automatique est **activée par défaut** pour les nouveaux réglages ; les choix enregistrés sont conservés. La recherche en arrière-plan se fait au maximum toutes les six heures dans les deux modes. Si l'installation automatique est désactivée, une notification Windows annonce les mises à jour disponibles. Après l'installation, une notification confirme la version installée. Les téléchargements sont vérifiés avec l'empreinte SHA-256 fournie par GitHub.
 - Aperçu Discord local et champs de secours manuels.
+- **Mode confidentialité** depuis le menu de l'icône près de l'horloge. Masquez temporairement le personnage, les statistiques et la localisation sans modifier les choix d'affichage enregistrés. Le jeu, le chrono, l'activité générale et le compteur de groupe activé restent disponibles. Désactivé par défaut ; une fois activé, il reste actif au redémarrage jusqu'à ce que vous le décochiez.
+- **Diagnostic local** depuis la fenêtre principale ou l'icône de notification. Vérifiez le jeu, Discord, Npcap, la surveillance, les champs reçus, l'affichage et le catalogue sans interrompre la présence. Consultez puis exportez un rapport texte anonymisé en UTF-8. Aucun envoi automatique ; le rapport exclut les valeurs du personnage, chemins locaux, adresses IP, identifiants et détails bruts des erreurs.
+- **Soutenir le projet** dans la barre latérale ouvre la [page Ko-fi de KaiiZzeR971](https://ko-fi.com/kaiizer971) dans votre navigateur.
 
 ### Dépannage
+
+Commencez par **Diagnostic** dans la fenêtre principale ou le menu de l'icône de notification. Consultez les vérifications proposées et l'aperçu du rapport avant de l'exporter pour demander de l'aide. Si des détails sont masqués, vérifiez également le mode confidentialité.
 
 | Problème | Vérifications |
 | --- | --- |
@@ -269,6 +281,8 @@ Si le problème persiste, ouvrez une [issue](https://github.com/KaiiZzeR971/AION
 ![Paramètres des mises à jour automatiques activées par défaut](images/updates-fr.png)
 
 ![Options de visibilité avec le bouton GitHub](images/visibility-fr.png)
+
+![Diagnostic local](images/diagnostic-fr.png)
 
 ### Questions courantes
 
